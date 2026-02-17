@@ -1,6 +1,7 @@
 # Telegram Media Accelerator Bot
 
 A Telegram bot with WebApp interface for fast media file uploading and sending, bypassing speed restrictions. The system uses Telegram as CDN through a private storage channel.
+<img width="1185" height="920" alt="Untitled" src="https://github.com/user-attachments/assets/3a13785d-96b8-4506-a54e-727d883a06ac" />
 
 ## Features
 
