@@ -23,69 +23,29 @@ A Telegram bot with WebApp interface for fast media file uploading and sending, 
 - **Proxy**: Nginx
 - **Processing**: FFmpeg
 
-## Quick Start
-
-1. Clone the repository
-2. Copy `.env.example` to `.env` and configure
-3. Run with Docker Compose:
-
-```bash
-docker-compose up -d
-```
-
-**Note**: Redis is optional. The app works without it. To enable Redis for production, uncomment the `redis` service in [docker-compose.yml](docker-compose.yml) and set `REDIS_HOST=redis` in `.env`.
-
 ## Project Structure
 
 ```
 telegram-media-bot/
-├── backend/                # Python FastAPI + aiogram backend
+├── backend/               
 │   ├── app/
-│   │   ├── api/           # FastAPI endpoints
-│   │   ├── bot/           # Telegram bot handlers
-│   │   ├── core/          # Core configuration
-│   │   ├── db/            # Database models and CRUD
-│   │   ├── services/      # Business logic
-│   │   └── utils/         # Utilities
-│   ├── alembic/           # Database migrations
+│   │   ├── api/           
+│   │   ├── bot/          
+│   │   ├── core/          
+│   │   ├── db/           
+│   │   ├── services/     
+│   │   └── utils/         
+│   ├── alembic/           
 │   ├── Dockerfile
 │   └── requirements.txt
-├── frontend/              # React TypeScript frontend
+├── frontend/              
 │   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── services/     # API services
-│   │   ├── hooks/        # Custom hooks
-│   │   └── types/        # TypeScript types
+│   │   ├── components/   
+│   │   ├── services/     
+│   │   ├── hooks/        
+│   │   └── types/        
 │   ├── Dockerfile
 │   └── package.json
-├── nginx/                 # Nginx configuration
+├── nginx/                 
 ├── docker-compose.yml
 └── .env.example
-
-```
-
-## Configuration
-
-See `.env.example` for all configuration options.
-
-## Development
-
-### Backend
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-## License
-
-MIT
