@@ -7,21 +7,24 @@ A Telegram bot with WebApp interface for fast media file uploading and sending, 
 ## Features
 
 - Video upload through WebApp (React)
+- Self-hosted Telegram Bot API server — bypasses the 20 MB download / 50 MB upload limits of the official API, enabling file transfers up to 2 GB
 - FFmpeg video processing (thumbnail generation, streaming optimization)
-- Telegram as free CDN storage
+- Telegram as free CDN storage via private storage channel
 - Instant video sharing via inline mode
-- Tiered system (Free/Pro)
+- Daily upload/stream limits with referral bonus system
 - PostgreSQL database (Redis optional for production)
 - Docker deployment
 
 ## Architecture
 
 - **Backend**: Python 3.10+ (FastAPI + aiogram 3.4+)
-- **Frontend**: React 18+ with TypeScript, Vite, Tailwind CSS, Framer Motion
+- **Bot API**: Self-hosted [Telegram Bot API](https://github.com/tdlib/telegram-bot-api) server — removes file size limits and provides local file access
+- **Frontend**: React 18+ with TypeScript, Vite, Tailwind CSS
 - **Database**: PostgreSQL 15+ (required)
 - **Cache**: Redis 7 (optional - for production caching/rate limiting)
 - **Proxy**: Nginx
 - **Processing**: FFmpeg
+
 
 ## Project Structure
 
